@@ -3,12 +3,7 @@ import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
 import "./index.css";
 
-import {
-  ApolloProvider,
-  ApolloClient,
-  createHttpLink,
-  InMemoryCache,
-} from "@apollo/client";
+import { ApolloProvider, ApolloClient, InMemoryCache } from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
 
 const host = import.meta.env.VITE_API_HOST;
