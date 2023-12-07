@@ -1,5 +1,6 @@
 import React from "react";
-import BookList from "../components/BookList";
+import { BookList, Book } from "../components/BookList";
+import { useLocation, useParams } from "react-router-dom";
 function Books() {
   return (
     <div>
@@ -7,5 +8,15 @@ function Books() {
     </div>
   );
 }
+function BookItem() {
+  const { state } = useLocation();
+  const params = useParams();
+  console.log(params, state);
+  return (
+    <div>
+      <Book title={params.title as string} />
+    </div>
+  );
+}
 
-export default Books;
+export { Books, BookItem };
